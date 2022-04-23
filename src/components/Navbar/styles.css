@@ -1,0 +1,15 @@
+.navLogo {
+    height: 70px;
+    width: 200px;
+  }
+
+.title {
+
+}
+
+.text {
+    display: 'flex';
+    justifyContent: 'center';
+    alignItems: 'center';
+    height: '90vh' 
+}
