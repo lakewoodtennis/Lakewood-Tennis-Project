@@ -9,9 +9,25 @@ import Singles from './pages/Singles';
 import Staff from './pages/Staff';
 import Tournaments from './pages/Tournaments';
 import cursedtennis from './images/tenniscourt.webp';
+import {useState, useEffect} from 'react';
 
 
 function App() {
+  const [data, setData] = useState([]);
+  const getData = async () => {
+    try{
+      const res = await fetch('https://sheet.best/api/sheets/74066c3c-3677-4487-a7af-79f1021dd670');
+      const data = await res.json();
+      setData(data);
+    }
+    catch(error){
+      console.log('error');
+    }
+  }
+
+    useEffect(() => {
+      getData();
+    }, []);
   return (
     <Router>
       <Navbar />
@@ -36,6 +52,13 @@ function App() {
         </p1>
         <h1 align='center'>‎</h1>
         <img className="photo"  src={cursedtennis}></img>
+        {data.map(item => (
+          <div>
+            <h2>
+              {item.dates}
+            </h2>
+          </div>
+        ))}
       </div>
 
     </Router>
