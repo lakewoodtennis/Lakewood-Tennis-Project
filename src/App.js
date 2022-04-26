@@ -10,6 +10,7 @@ import Staff from './pages/Staff';
 import Tournaments from './pages/Tournaments';
 import cursedtennis from './images/tenniscourt.webp';
 import {useState, useEffect} from 'react';
+//import {Link} from 'react-router-dom';
 
 
 function App() {
@@ -52,11 +53,20 @@ function App() {
         </p1>
         <h1 align='center'>‎</h1>
         <img className="photo"  src={cursedtennis}></img>
+        
         {data.map(item => (
           <div>
             <h2>
-              {item.dates}
+              {item.dates} {item.level} {item.age_group}
             </h2>
+            <button
+              type="button"
+              onClick={(e) => {
+              e.preventDefault();
+              window.open(item.link,"_blank");
+            }}
+              > Link to Tournament</button>
+            
           </div>
         ))}
       </div>
