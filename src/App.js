@@ -9,6 +9,7 @@ import Singles from './pages/Singles';
 import Staff from './pages/Staff';
 import Tournaments from './pages/Tournaments';
 import cursedtennis from './images/tenniscourt.webp';
+import silva from './images/silva.jpg';
 
 
 function App() {
@@ -37,6 +38,28 @@ function App() {
         <h1 align='center'>‎</h1>
         <img className="photo"  src={cursedtennis}></img>
       </div>
+
+      <br></br><br></br>
+      <p className = "scrollSpot">Heres some text to scroll too</p>
+
+      <br></br><br></br>
+
+      <div style={{textAlign: 'center'}}>
+        <h className = "profiles" style = {{fontWeight:'bold', fontSize: 50}}>Instructor Profiles</h>
+      </div>
+
+      <div>
+        <h style = {{fontWeight: 'bold', fonsize: 30}}>VICTOR SILVA, DIRECTOR AND HEAD COACH OF SILVA ACADEMY</h>
+        <p>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
+          He has played tennis since he was five years old and started to compete 
+          seriously at 12. He won 10 national tournaments in Brazil and more 
+          than 50 titles in the Brazilian Tennis Federation. He turned pro at 16 
+          and earned his first ATP point shortly thereafter. Victor came to California 
+          at 17 years of age, played at Wilson High School in Long Beach,then two years 
+          of college at Long Beach State. Victor started Silva Tennis Academy in 2020.</p>
+        <img src = {silva} alt = "Victor Silva"></img>
+      </div>
+
 
     </Router>
   );
