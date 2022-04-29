@@ -39,11 +39,16 @@ function App() {
         <img className="photo"  src={cursedtennis}></img>
       </div>
 
+      {/*Shop info portion*/}
       <br></br><br></br>
-      <p className = "scrollSpot">Heres some text to scroll too</p>
+      <div style={{textAlign: 'center'}}>
+        <h className = "shopInfo" style = {{fontWeight:'bold', fontSize: 50}}>Lakewood Tennis Center</h>
+        <br></br>
+        <h style = {{fontWeight:'bold', fontSize: 50}}>Hours of Operation/Cost Sheet</h>
+      </div>
 
       <br></br><br></br>
-
+       {/*Instructor profiles section*/}
       <div style={{textAlign: 'center'}}>
         <h className = "profiles" style = {{fontWeight:'bold', fontSize: 50}}>Instructor Profiles</h>
       </div>

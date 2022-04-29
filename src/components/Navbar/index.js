@@ -20,7 +20,7 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <Link activeClass = "active" to = "scrollSpot" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+          <Link activeClass = "active" to = "shopInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
             Information
           </Link>
           <NavLink to='/reservation' activeStyle>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <NavLink to='/singles' activeStyle>
             Singles Ladder
           </NavLink>
-          <Link activeClass = "active" to = "scrollSpot" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+          <Link activeClass = "active" to = "profiles" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
             About Us
           </Link>
         </NavMenu>
