@@ -8,6 +8,7 @@ import {
   NavBtnLink
 } from './NavbarElements';
 import "./styles.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
 
@@ -19,9 +20,9 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/information' activeStyle>
+          <Link activeClass = "active" to = "shopInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
             Information
-          </NavLink>
+          </Link>
           <NavLink to='/reservation' activeStyle>
             Reservations
           </NavLink>
@@ -31,12 +32,14 @@ const Navbar = () => {
           <NavLink to='/singles' activeStyle>
             Singles Ladder
           </NavLink>
-          <NavLink to='/staff' activeStyle>
+          <Link activeClass = "active" to = "profiles" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
             About Us
-          </NavLink>
+          </Link>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Contact Us</NavBtnLink>
+          <Link activeClass = "active" to = "contactInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+            Contact Us
+            </Link>
         </NavBtn>
       </Nav>
     </>
