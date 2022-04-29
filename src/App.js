@@ -41,10 +41,22 @@ function App() {
 
       {/*Shop info portion*/}
       <br></br><br></br>
-      <div style={{textAlign: 'center'}}>
-        <h className = "shopInfo" style = {{fontWeight:'bold', fontSize: 50}}>Lakewood Tennis Center</h>
+      <div style={{textAlign: 'center', }}>
+        <h className = "shopInfo" style = {{fontWeight:'bold', fontSize: 50, }}>Lakewood Tennis Center</h>
         <br></br>
         <h style = {{fontWeight:'bold', fontSize: 50}}>Hours of Operation/Cost Sheet</h>
+        <br></br><br></br>
+        <h2 style = {{fontWeight:'bold'}}>Shop Hours</h2>
+        <p>Monday - Friday 8:00 am - 9:00 pm</p>
+        <p>Saturday & Sunday 7:00 am - 5:00 pm</p>
+        <br></br>
+        <h2 style = {{fontWeight: 'bold'}}>Fee Schedules</h2>
+        <p>Monday-Friday 8:00 am to 3:00 pm - $6.00 per hour/court</p>
+        <p>Monday-Friday 3:00 pm to 9:00 pm - $12.00 per hour/court</p>
+        <p>Weekend & Holidays 7:00 am to 5:00 pm - $10.00 per hour/court</p>
+        <br></br>
+        <h2 style = {{fontWeight: 'bold'}}>Ball Machine</h2>
+        <p>Court Fee + $8.00 per hour</p>
       </div>
 
       <br></br><br></br>
@@ -63,6 +75,20 @@ function App() {
           at 17 years of age, played at Wilson High School in Long Beach,then two years 
           of college at Long Beach State. Victor started Silva Tennis Academy in 2020.</p>
         <img src = {silva} alt = "Victor Silva"></img>
+      </div>
+
+      <div>
+        <h style = {{fontWeight: 'bold', fontsize:30}}>Contact Info</h>
+      </div>
+
+      <div class = "contactInfo">
+        <p>Tennis Director</p>
+        <p>Eric Stephens</p>
+
+        <p>Lakewood Tennis – 4212 Clubhouse Dr. Lakewood, CA 90712</p>
+        <p>562-496-3530</p>
+        {/*to get href tag*/}
+        <a>Lakewood10s@gmail.com</a>
       </div>
 
 

@@ -37,7 +37,9 @@ const Navbar = () => {
           </Link>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Contact Us</NavBtnLink>
+          <Link activeClass = "active" to = "contactInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+            Contact Us
+            </Link>
         </NavBtn>
       </Nav>
     </>
