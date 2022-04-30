@@ -30,6 +30,22 @@ function App() {
     useEffect(() => {
       getData();
     }, []);
+
+    const rows = data.map(item => (
+      <tr>
+        <td align='center'>{item.dates}</td>
+        <td align='center'>{item.level}</td>
+        <td align='center'>{item.age_group}</td>
+        <td align='center'><button
+        type="button"
+        onClick={(e) => {
+        e.preventDefault();
+        window.open(item.link,"_blank");
+      }}
+        > Link to Tournament</button></td>
+      </tr>
+    ));
+
   return (
     <Router>
       <Navbar />
@@ -54,22 +70,39 @@ function App() {
         </p1>
         <h1 align='center'>‎</h1>
         <img className="photo"  src={cursedtennis}></img>
-        
+
+        {/*functionality of showing tournament info in a table format*/}
+        <table
+          style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
+         className="table table-hover">
+          <thead style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+            <tr style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+              <th >Dates</th>
+              <th>Level</th>
+              <th>Age Group</th>
+              <th>Link to Sign-up</th>
+            </tr>
+          </thead>
+            <tbody>
+            {rows}
+            </tbody>
+        </table>
+        {/*
         {data.map(item => (
           <div>
             <h2>
               {item.dates} {item.level} {item.age_group}
-            </h2>
-            <button
+              <button
               type="button"
               onClick={(e) => {
               e.preventDefault();
               window.open(item.link,"_blank");
             }}
               > Link to Tournament</button>
-            
+            </h2>
           </div>
         ))}
+          */}
       </div>
 
       {/*Shop info portion*/}
