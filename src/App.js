@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,14 +11,12 @@ import Staff from './pages/Staff';
 import Tournaments from './pages/Tournaments';
 import cursedtennis from './images/tenniscourt.webp';
 import silva from './images/silva.jpg';
-<<<<<<< HEAD
 import tem from './images/tem.jpg';
 import Popup from './popupWindows/Popup';
 import './popupWindows/buttonStyle.css';
-=======
 import {useState, useEffect} from 'react';
 //import {Link} from 'react-router-dom';
->>>>>>> main
+
 
 function Map(){
   return(
@@ -34,14 +32,12 @@ function Map(){
 const WrappedMap  = withScriptjs(withGoogleMap(Map));
 
 function App() {
-<<<<<<< HEAD
   const[isOpen,setIsOpen] = useState(false);
 
   const togglePopup = () =>{
     setIsOpen(!isOpen);
   }
 
-=======
   const [data, setData] = useState([]);
   const getData = async () => {
     try{
@@ -76,7 +72,6 @@ function App() {
       </tr>
     ));
 
->>>>>>> main
   return (
     <Router>
       <Navbar />
@@ -100,9 +95,7 @@ function App() {
             Don't let your dreams be dreams go out and play some tennis. <span role="img" aria-label = "racket">🎾</span>
         </p1>
         <h1 align='center'>‎</h1>
-<<<<<<< HEAD
         <img className="photo" alt =""  src={cursedtennis}></img>
-=======
         <img className="photo"  src={cursedtennis}></img>
 
         {/*functionality of showing tournament info in a table format*/}
@@ -121,23 +114,7 @@ function App() {
             {rows}
             </tbody>
         </table>
-        {/*
-        {data.map(item => (
-          <div>
-            <h2>
-              {item.dates} {item.level} {item.age_group}
-              <button
-              type="button"
-              onClick={(e) => {
-              e.preventDefault();
-              window.open(item.link,"_blank");
-            }}
-              > Link to Tournament</button>
-            </h2>
-          </div>
-        ))}
-          */}
->>>>>>> main
+
       </div>
 
       {/*Shop info portion*/}
