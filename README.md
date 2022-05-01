@@ -33,4 +33,6 @@
 
 To Run:
     npm install
+    npm i -S @react-google-maps/api
+    npm install react-scroll
     npm run
