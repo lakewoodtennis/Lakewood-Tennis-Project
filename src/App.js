@@ -36,13 +36,16 @@ function App() {
         <td align='center'>{item.dates}</td>
         <td align='center'>{item.level}</td>
         <td align='center'>{item.age_group}</td>
-        <td align='center'><button
+        <td align='center'>
+        {item.link === 'TBD' ? <p>TBD</p> : 
+        <button
         type="button"
         onClick={(e) => {
         e.preventDefault();
         window.open(item.link,"_blank");
       }}
-        > Link to Tournament</button></td>
+        > Link to Tournament</button>}
+        </td>
       </tr>
     ));
 
