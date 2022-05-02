@@ -12,32 +12,42 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
 
+  const button = {
+    color: 'black',
+    width: 1400,
+    display: 'block', 
+    align: 'center',
+    alignItems:'center', 
+    textAlign: 'center',
+    padding: '70px'
+  };
+
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <img className="navLogo" src={require('../../images/tempLogo.png')} alt='logo' />
+          <img className="navLogo" src={require('../../images/tempLogo.png')} alt='logo' align='left' />
         </NavLink>
         <Bars />
         <NavMenu>
-          <Link activeClass = "active" to = "shopInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+          <Link activeClass = "active" to = "shopInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             Information
           </Link>
-          <NavLink to='/reservation' activeStyle>
+          <Link activeClass = "active" to = "reservation" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             Reservations
-          </NavLink>
-          <NavLink to='/tournaments' activeStyle>
+          </Link>
+          <Link activeClass = "active" to = "Tournaments" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             Tournaments
-          </NavLink>
-          <NavLink to='/singles' activeStyle>
+          </Link>
+          <Link activeClass = "active" to = "singles" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             Singles Ladder
-          </NavLink>
-          <Link activeClass = "active" to = "profiles" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+          </Link>
+          <Link activeClass = "active" to = "profiles" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             About Us
           </Link>
         </NavMenu>
         <NavBtn>
-          <Link activeClass = "active" to = "contactInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{color:"white"}}>
+          <Link activeClass = "active" to = "contactInfo" spy = {true} smooth = {true} offset = {-70} delay = {0} style = {{padding: 40, color:"white", fontSize: 20}}>
             Contact Us
             </Link>
         </NavBtn>
