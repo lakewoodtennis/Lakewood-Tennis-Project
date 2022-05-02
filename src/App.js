@@ -10,7 +10,7 @@ import Popup from './popupWindows/Popup';
 import './popupWindows/buttonStyle.css';
 import {useState, useEffect} from 'react';
 import { Autocomplete } from '@react-google-maps/api';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Map(){
@@ -36,7 +36,8 @@ function App() {
   const [data, setData] = useState([]);
   const getData = async () => {
     try{
-      const res = await fetch('https://sheet.best/api/sheets/74066c3c-3677-4487-a7af-79f1021dd670');
+    {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
+      const res = await fetch('');
       const data = await res.json();
       setData(data);
     }
@@ -48,7 +49,7 @@ function App() {
     useEffect(() => {
       getData();
     }, []);
-
+  
     const rows = data.map(item => (
       <tr>
         <td align='center'>{item.dates}</td>
@@ -66,10 +67,10 @@ function App() {
         </td>
       </tr>
     ));
-
+    
     const infoStyle = {
       color: 'black',
-      width: 2000,
+      width: '100%',
       display: 'block', 
       align: 'center',
       alignItems:'center', 
@@ -115,7 +116,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
       </Routes>
 
@@ -152,7 +153,7 @@ function App() {
 
       {/*HOME IMAGE*/}
       <div style= {homeImage}>
-        <img className="photo" alt =""  src={center}></img>
+        <img className="photo" alt =""  src={center} style={{width:'100%'}}></img>
       </div>
 
       {/*RESERVATIONS*/}
@@ -164,13 +165,15 @@ function App() {
       </div>
 
       {/*TOURNAMENTS*/}
+      
       <div style={infoStyle}>
         <h1 style = {{fontWeight:'bold', fontSize: 40}}> Tournaments </h1>
         <p1>
             Information about ongoing tournaments
         </p1>
-
+  
         {/*functionality of showing tournament info in a table format*/}
+        
         <table
           style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
          className="table table-hover">
@@ -187,7 +190,7 @@ function App() {
             </tbody>
         </table>
       </div>
-
+  
       {/*SINGLES LADDER*/}
       <div style={infoStyle}>
         <h1 style = {{fontWeight:'bold', fontSize: 40}}> Singles Ladder </h1>
@@ -288,9 +291,9 @@ function App() {
           
         />
       </div>
-
+          
       <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
-  
+            
 
     </Router>
   );
