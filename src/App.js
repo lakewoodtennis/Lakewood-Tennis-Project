@@ -152,7 +152,7 @@ function App() {
 
       {/*HOME IMAGE*/}
       <div style= {homeImage}>
-        <img className="photo" alt =""  src={center}></img>
+        <img className="photo" height = {50} width = {50} alt =""  src={center}></img>
       </div>
 
       {/*RESERVATIONS*/}
@@ -240,7 +240,7 @@ function App() {
         <h style = {{fontWeight: 'bold', fontSize: 30}}>Tem Sykahua</h>
       </div>
       <div style={profile}>
-        <img src = {tem} height = {800} width = {'1100vw'} alt = "Tem Sykahua"></img>
+        <img src = {tem} height = {500} width = {'350vw'} alt = "Tem Sykahua"></img>
         <p>Tem Sykahua is a former Men’s Open Champion. He has won many tournaments that include: 
            Men’s Open, NTRP 5.5, Junior College, College Division 3, Junior Open and Satellite, 
            Masters, etc. With over 30 years of playing experience, Tem has worked with top level 
