@@ -3,6 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker} from "react-google-maps";
+import court1 from './images/courtImages/court1.jpg';
+import court2 from './images/courtImages/court2.jpg';
+import court3 from './images/courtImages/court3.jpg';
+import court5 from './images/courtImages/court5.jpg';
+import court6 from './images/courtImages/court6.jpg';
+import court7 from './images/courtImages/court7.jpg';
 import center from './images/tenniscenter.jpg';
 import silva from './images/silva.jpg';
 import kourts from './images/kourts.svg';
@@ -11,7 +17,9 @@ import Popup from './popupWindows/Popup';
 import './popupWindows/buttonStyle.css';
 import {useState, useEffect} from 'react';
 import { Autocomplete } from '@react-google-maps/api';
+import  {Carousel} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+
 
 
 function Map(){
@@ -118,6 +126,8 @@ function App() {
       margin: 'auto'
     }
 
+
+
   return (
     <Router>
       <Navbar/>
@@ -137,6 +147,75 @@ function App() {
             make a reservation, and tournaments. Book a court or lesson today!
         </p1>
         <br></br>
+        <Carousel fade>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court1}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court2}
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court3}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court5}
+      alt="Fourth slide"
+    />
+    <Carousel.Caption>
+      <h3>Fourth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court6}
+      alt="Fifth slide"
+    />
+    <Carousel.Caption>
+      <h3>Fifth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item><Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={court7}
+      alt="Sixth slide"
+    />
+    <Carousel.Caption>
+      <h3>Sixth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+
 
         {/*HOURS OF OPERATION + FEES*/}
         <br></br>
@@ -307,7 +386,7 @@ function App() {
           
         />
       </div>
-          
+      <br></br><br></br><br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
       <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
             
 
