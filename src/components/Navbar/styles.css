@@ -1,8 +1,7 @@
 .navLogo {
-    height: 70px;
-    width: 440px;
-    align: 'left';
-    alignItems: 'left'
+    height: 65px;
+    width: 290px;
+    align: left;
   }
 
 .title {
@@ -14,4 +13,4 @@
     justifyContent: 'center';
     alignItems: 'center';
     height: '90vh' 
-}
+} 

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker} from "react-google-maps";
 import center from './images/tenniscenter.jpg';
 import silva from './images/silva.jpg';
+import kourts from './images/kourts.svg';
 import tem from './images/tem.jpg';
 import Popup from './popupWindows/Popup';
 import './popupWindows/buttonStyle.css';
@@ -81,25 +82,28 @@ function App() {
       align: 'center',
       alignItems:'center',
       padding: '60px'
-    };
-
-    const homeImage = {
-
     }
 
+    const kourts = {
+      textAlign: 'center',
+      display: 'block',
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: 'auto',
+      width: '100%'
+    }
 
     const profileName = {
       display: 'block',
       color: 'black',
-      align: 'left',
-      alignItems:'left', 
-      textAlign: 'left',
+      align: 'center',
+      alignItems:'center', 
+      textAlign: 'center',
       fontSize: '30',
       align: 'left',
       alignItems:'left',
       padding: '60px'
     }
-
 
     const profile = {
       display: 'inline-block',
@@ -110,9 +114,9 @@ function App() {
       paddingBottom: "5%",
       align: 'left',
       alignItems:'left',
-      padding: '60px'
+      padding: '60px',
+      margin: 'auto'
     }
-
 
   return (
     <Router>
@@ -125,43 +129,53 @@ function App() {
         <h1 className = "home" style = {{fontWeight:'bold', fontSize: 40}}> Welcome to Lakewood Tennis Center ! </h1>
         <br></br>
         <p1>
-            Lakewood Tennis Center supplies many things such as tennis balls for playing 
-            tennis and tennis courts that are rented out for playing tennis and instructors that teach you how to play tennis.
-            Legend has it the Lakewood Tennis Center is located in Lakewood, California. Feel free to explore this website to find
-            more information such as hours, information about staff, ongoing events, and make a reservation!
-            Don't let your dreams be dreams go out and play some tennis. <span role="img" aria-label = "racket">🎾</span>
+            Lakewood Tennis Center is a 14-tennis court facility located in the heart of Lakewood, California. We are open to the public 
+            and run many UTSA Junior tournaments, and adult singles tournaments and other leagues. Lakewood Tennis Center also supplies 
+            equipment such as ball rentals at an affordable and competitive price by a friendly and knowledgable staff. Instructors
+            are also available on-site to teach you everything you want to know about tennis. Feel free to expore this website to find
+            out more information about our facility such as hours, information about or amazing instructors, information on how to 
+            make a reservation, and tournaments. Book a court or lesson today!
         </p1>
         <br></br>
 
         {/*HOURS OF OPERATION + FEES*/}
         <br></br>
-        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>Hours of Operation & Costs</h1>
-        <br></br><br></br>
+        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>⏰ Hours of Operation</h1>
+        <br></br>
         <h2 style = {{fontWeight:'bold'}}>Shop Hours</h2>
         <p>Monday - Friday 8:00 am - 9:00 pm</p>
         <p>Saturday & Sunday 7:00 am - 5:00 pm</p>
         <br></br>
-        <h2 style = {{fontWeight: 'bold'}}>Fee Schedules</h2>
+        <br></br>
+        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>💲 Costs</h1>
+        <br></br>
+        <h2 style = {{fontWeight: 'bold'}}>Court Rental Schedule</h2>
         <p>Monday-Friday 8:00 am to 3:00 pm - $6.00 per hour/court</p>
         <p>Monday-Friday 3:00 pm to 9:00 pm - $12.00 per hour/court</p>
         <p>Weekend & Holidays 7:00 am to 5:00 pm - $10.00 per hour/court</p>
         <br></br>
-        <h2 style = {{fontWeight: 'bold'}}>Ball Machine</h2>
-        <p>Court Fee + $8.00 per hour</p>
+        <h2 style = {{fontWeight: 'bold'}}>Ball Machine Fees</h2>
+        <p>Monday-Friday 8:00 am to 3:00 pm - $14.00 per hour/court</p>
+        <p>Monday-Friday 3:00 pm to 9:00 pm - $20.00 per hour/court</p>
+        <p>Weekend & Holidays 7:00 am to 5:00 pm - $18.00 per hour/court</p>
+        <p></p>
         <br></br>
       </div>
 
       {/*HOME IMAGE*/}
-      <div style= {homeImage}>
+      <div>
         <img className="photo" alt =""  src={center} style={{width:'100%'}}></img>
       </div>
 
       {/*RESERVATIONS*/}
       <div style ={infoStyle} >
         <h1 style = {{fontWeight:'bold', fontSize: 40}}> Reservations </h1>
+        <br></br>
         <p1>
-            Information about making reservations....
+            Courts must be reserved in advance.
+            To book a court, visit the <a href="https://www.kourts.com/">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
         </p1>
+        
       </div>
 
       {/*TOURNAMENTS*/}
@@ -171,6 +185,7 @@ function App() {
         <p1>
             Information about ongoing tournaments
         </p1>
+
   
         {/*functionality of showing tournament info in a table format*/}
         
@@ -287,8 +302,8 @@ function App() {
         <WrappedMap
           googleMapURL = {'https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDYxDVoaLN3_ZF4TDICgharUUQtly0lnK8'}
           loadingElement = {<div style = {{height: "100%"}}/>}
-          containerElement = {<div style = {{ height: "100%"}} />}
-          mapElement = {<div style = {{ height:"100%"}} />}
+          containerElement = {<div style = {{ height: "100%", align:'center'}} />}
+          mapElement = {<div style = {{ height:"150%"}} />}
           
         />
       </div>
