@@ -122,7 +122,7 @@ function App() {
 
       {/*HOME*/}
       <div style= {infoStyle}>
-        <h1 style = {{fontWeight:'bold', fontSize: 40}}> Welcome to Lakewood Tennis Center ! </h1>
+        <h1 className = "home" style = {{fontWeight:'bold', fontSize: 40}}> Welcome to Lakewood Tennis Center ! </h1>
         <br></br>
         <p1>
             Lakewood Tennis Center supplies many things such as tennis balls for playing 
@@ -135,7 +135,7 @@ function App() {
 
         {/*HOURS OF OPERATION + FEES*/}
         <br></br>
-        <h1 style = {{fontWeight:'bold', fontSize: 30}}>Hours of Operation & Costs</h1>
+        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>Hours of Operation & Costs</h1>
         <br></br><br></br>
         <h2 style = {{fontWeight:'bold'}}>Shop Hours</h2>
         <p>Monday - Friday 8:00 am - 9:00 pm</p>
@@ -167,7 +167,7 @@ function App() {
       {/*TOURNAMENTS*/}
       
       <div style={infoStyle}>
-        <h1 style = {{fontWeight:'bold', fontSize: 40}}> Tournaments </h1>
+        <h1 className = "Tournaments" style = {{fontWeight:'bold', fontSize: 40}}> Tournaments </h1>
         <p1>
             Information about ongoing tournaments
         </p1>
@@ -193,7 +193,7 @@ function App() {
   
       {/*SINGLES LADDER*/}
       <div style={infoStyle}>
-        <h1 style = {{fontWeight:'bold', fontSize: 40}}> Singles Ladder </h1>
+        <h1 className = "singles" style = {{fontWeight:'bold', fontSize: 40}}> Singles Ladder </h1>
         <p1>
             Information about Singles Ladder
         </p1>
@@ -219,6 +219,7 @@ function App() {
 
       <div style={profile}>
         <img src = {silva} alt = "Victor Silva" ></img>
+        <br></br>
         <p1 fontSize = {200}>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
           He has played tennis since he was five years old and started to compete 
           seriously at 12. He won 10 national tournaments in Brazil and more 
@@ -243,19 +244,19 @@ function App() {
         <h style = {{fontWeight: 'bold', fontSize: 30}}>Tem Sykahua</h>
       </div>
       <div style={profile}>
-        <img src = {tem} height = {800} width = {'1100vw'} alt = "Tem Sykahua"></img>
+        <img src = {tem} height = {800} width = {'600vw'} alt = "Tem Sykahua"></img>
         <p>Tem Sykahua is a former Men’s Open Champion. He has won many tournaments that include: 
            Men’s Open, NTRP 5.5, Junior College, College Division 3, Junior Open and Satellite, 
            Masters, etc. With over 30 years of playing experience, Tem has worked with top level 
            coaches and athletes to share his knowledge of the game. He is a current member of the 
            United States Professional Tennis Association. Tem is also an inductee to Lakewood’s 
            Hall of Fame for his new found success on students winning tournaments.</p>
-           <input 
+           <input   
           type = "button" 
           value = "Click for Contact Info" 
           onClick = {togglePopup}
         />
-        {isOpen && <Popup
+        {isOpen && <Popup 
           content = {<>
             <p>Location: Lakewood Tennis Center</p>
             <p>Phone: (562) 355 - 2545</p>
@@ -268,7 +269,7 @@ function App() {
 
       {/*CONTACT US*/}   
       <div style ={infoStyle}>
-        <h style = {{fontWeight: 'bold', fontSize: 40}}>Contact Info</h>
+        <h className = "contactInfo" style = {{fontWeight: 'bold', fontSize: 40}}>Contact Info</h>
         <br></br>
         <p1><b>Tennis Director</b></p1>
         <br></br>
