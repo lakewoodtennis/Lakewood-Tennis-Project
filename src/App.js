@@ -42,13 +42,14 @@ function App() {
     setIsOpen(!isOpen);
   }
 
-  const [data, setData] = useState([]);
-  const getData = async () => {
+  {/* Tounament api setup */}
+  const [tournData, settournData] = useState([]);
+  const gettournData = async () => {
     try{
     {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
-      const res = await fetch('');
-      const data = await res.json();
-      setData(data);
+      const res = await fetch('https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf');
+      const tournData = await res.json();
+      settournData(tournData);
     }
     catch(error){
       console.log('error');
@@ -56,10 +57,37 @@ function App() {
   }
 
     useEffect(() => {
-      getData();
+      gettournData();
+    }, []);
+
+    {/* Singles Ladder api setup */}
+    const [ladderData, setladderData] = useState([]);
+  const getladderData = async () => {
+    try{
+    {/*api link: https://sheet.best/api/sheets/2f8bd442-bbfd-4826-a098-b9f4c48eae19*/}
+      const res = await fetch('https://sheet.best/api/sheets/2f8bd442-bbfd-4826-a098-b9f4c48eae19');
+      const ladderData = await res.json();
+      setladderData(ladderData);
+    }
+    catch(error){
+      console.log('error');
+    }
+  }
+
+    useEffect(() => {
+      getladderData();
     }, []);
   
-    const rows = data.map(item => (
+    {/* Function to help set up Singles Ladder data */}
+    const ladderRows = ladderData.map(item => (
+      <tr>
+        <td align='center'>{item.ranking}</td>
+        <td align='center'>{item.name}</td>
+      </tr>
+    ));
+
+    {/* Function to help set up Tournament data */}
+    const tournRows = tournData.map(item => (
       <tr>
         <td align='center'>{item.dates}</td>
         <td align='center'>{item.level}</td>
@@ -280,7 +308,7 @@ function App() {
             </tr>
           </thead>
             <tbody>
-            {rows}
+            {tournRows}
             </tbody>
         </table>
       </div>
@@ -291,6 +319,22 @@ function App() {
         <p1>
             Information about Singles Ladder
         </p1>
+
+        {/*functionality of showing singles ladder info in a table format*/}
+        
+        <table
+          style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
+         className="table table-hover">
+          <thead style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+            <tr style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+              <th>Ranking</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+            <tbody>
+            {ladderRows}
+            </tbody>
+        </table>
       </div>
 
       {/*ABOUT US*/}    
@@ -386,8 +430,13 @@ function App() {
           
         />
       </div>
+<<<<<<< Updated upstream
       <br></br><br></br><br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
       <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
+=======
+          
+      <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/tournData=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
+>>>>>>> Stashed changes
             
 
     </Router>
