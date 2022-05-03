@@ -47,7 +47,7 @@ function App() {
   const gettournData = async () => {
     try{
     {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
-      const res = await fetch('https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf');
+      const res = await fetch('');
       const tournData = await res.json();
       settournData(tournData);
     }
@@ -65,7 +65,7 @@ function App() {
   const getladderData = async () => {
     try{
     {/*api link: https://sheet.best/api/sheets/2f8bd442-bbfd-4826-a098-b9f4c48eae19*/}
-      const res = await fetch('https://sheet.best/api/sheets/2f8bd442-bbfd-4826-a098-b9f4c48eae19');
+      const res = await fetch('');
       const ladderData = await res.json();
       setladderData(ladderData);
     }
@@ -430,13 +430,8 @@ function App() {
           
         />
       </div>
-<<<<<<< Updated upstream
       <br></br><br></br><br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
       <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
-=======
-          
-      <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/tournData=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
->>>>>>> Stashed changes
             
 
     </Router>
