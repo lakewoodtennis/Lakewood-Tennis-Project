@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './Profiles.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker} from "react-google-maps";
@@ -182,10 +183,6 @@ function App() {
       src={court1}
       alt="First slide"
     />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -193,11 +190,6 @@ function App() {
       src={court2}
       alt="Second slide"
     />
-
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -205,10 +197,6 @@ function App() {
       src={court3}
       alt="Third slide"
     />
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -216,10 +204,7 @@ function App() {
       src={court5}
       alt="Fourth slide"
     />
-    <Carousel.Caption>
-      <h3>Fourth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
+
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -227,20 +212,14 @@ function App() {
       src={court6}
       alt="Fifth slide"
     />
-    <Carousel.Caption>
-      <h3>Fifth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
+
   </Carousel.Item><Carousel.Item>
     <img
       className="d-block w-100"
       src={court7}
       alt="Sixth slide"
     />
-    <Carousel.Caption>
-      <h3>Sixth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
+
   </Carousel.Item>
 </Carousel>
 
@@ -349,6 +328,19 @@ function App() {
       {/*INSTRUCTORS*/} 
       <div style={infoStyle}>
         <h className = "profiles" style = {{fontWeight:'bold', fontSize: 30}}>Instructors</h>
+      </div>
+
+      <div>
+        <link rel = "stylesheet"
+          href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <div className = "card">
+          <img src = {silva} alt = "Silva" style ={{width: "100%"}}/>
+          <h1>Victor Silva</h1>
+          <p className="title"> Founder, Silva Tennis Academy</p>
+          <p><button>Contact</button></p>
+        <p>Harvard University</p>
+      </div>
       </div>
 
       <div style = {profileName}>
