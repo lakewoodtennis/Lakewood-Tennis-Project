@@ -1,6 +1,8 @@
 .navLogo {
     height: 70px;
-    width: 200px;
+    width: 440px;
+    align: 'left';
+    alignItems: 'left'
   }
 
 .title {

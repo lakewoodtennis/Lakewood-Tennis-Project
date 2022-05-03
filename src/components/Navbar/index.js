@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <Nav>
       <Link activeClass = "active" to = "home" spy = {true} smooth = {true} offset = {-100} delay = {0} >
-          <img className="navLogo" src={require('../../images/tempLogo.png')} alt='logo' align='left' />
+          <img className="navLogo" src={require('../../images/logotrans.png')} alt='logo'/>
         </Link>
         <Bars />
         <NavMenu>
