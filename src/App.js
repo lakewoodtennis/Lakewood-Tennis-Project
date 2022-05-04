@@ -165,7 +165,7 @@ function App() {
 
       {/*HOME*/}
       <div style= {infoStyle}>
-        <h1 className = "home" style = {{fontWeight:'bold', fontSize: 40}}> Welcome to Lakewood Tennis Center ! </h1>
+        <h1 className = "home" style = {{fontWeight:'bold', fontSize: 60}}> Welcome to Lakewood Tennis Center ! </h1>
         <br></br>
         <p1>
             Lakewood Tennis Center is a 14-tennis court facility located in the heart of Lakewood, California. We are open to the public 
@@ -175,6 +175,7 @@ function App() {
             out more information about our facility such as hours, information about or amazing instructors, information on how to 
             make a reservation, and tournaments. Book a court or lesson today!
         </p1>
+        <br></br>
         <br></br>
         <Carousel fade>
   <Carousel.Item>
@@ -226,26 +227,33 @@ function App() {
 
         {/*HOURS OF OPERATION + FEES*/}
         <br></br>
-        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>⏰ Hours of Operation</h1>
-        <br></br>
-        <h2 style = {{fontWeight:'bold'}}>Shop Hours</h2>
-        <p>Monday - Friday 8:00 am - 9:00 pm</p>
-        <p>Saturday & Sunday 7:00 am - 5:00 pm</p>
-        <br></br>
-        <br></br>
-        <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>💲 Costs</h1>
-        <br></br>
-        <h2 style = {{fontWeight: 'bold'}}>Court Rental Schedule</h2>
-        <p>Monday-Friday 8:00 am to 3:00 pm - $6.00 per hour/court</p>
-        <p>Monday-Friday 3:00 pm to 9:00 pm - $12.00 per hour/court</p>
-        <p>Weekend & Holidays 7:00 am to 5:00 pm - $10.00 per hour/court</p>
-        <br></br>
-        <h2 style = {{fontWeight: 'bold'}}>Ball Machine Fees</h2>
-        <p>Monday-Friday 8:00 am to 3:00 pm - $14.00 per hour/court</p>
-        <p>Monday-Friday 3:00 pm to 9:00 pm - $20.00 per hour/court</p>
-        <p>Weekend & Holidays 7:00 am to 5:00 pm - $18.00 per hour/court</p>
-        <p></p>
-        <br></br>
+<div>
+ <h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>⏰ Hours of Operation</h1>
+   <br></br>
+    <h2 style = {{fontWeight:'bold'}}>Shop Hours</h2>
+    <p>Monday - Friday 8:00 am - 9:00 pm</p>
+    <p>Saturday & Sunday 7:00 am - 5:00 pm</p>
+</div>
+
+<h1 className = "shopInfo" style = {{fontWeight:'bold', fontSize: 30}}>💲 Costs</h1>
+<br></br>
+<br></br>
+      <div className = "shopBox">
+          
+        <div style = {{marginRight:'2em'}}>
+          <h2 style = {{fontWeight: 'bold'}}>Court Rental Schedule</h2>
+          <p>Monday-Friday 8:00 am to 3:00 pm - $6.00 per hour/court</p>
+          <p>Monday-Friday 3:00 pm to 9:00 pm - $12.00 per hour/court</p>
+          <p>Weekend & Holidays 7:00 am to 5:00 pm - $10.00 per hour/court</p>
+        </div>
+
+        <div>
+          <h2 style = {{fontWeight: 'bold'}}>Ball Machine Fees</h2>
+          <p>Monday-Friday 8:00 am to 3:00 pm - $14.00 per hour/court</p>
+          <p>Monday-Friday 3:00 pm to 9:00 pm - $20.00 per hour/court</p>
+          <p>Weekend & Holidays 7:00 am to 5:00 pm - $18.00 per hour/court</p>
+        </div>
+        </div>
       </div>
 
       {/*HOME IMAGE*/}
@@ -254,12 +262,12 @@ function App() {
       </div>
 
       {/*RESERVATIONS*/}
-      <div style ={infoStyle} >
+      <div style ={infoStyle} class = "reservations">
         <h1 style = {{fontWeight:'bold', fontSize: 40}}> Reservations </h1>
         <br></br>
         <p1>
             Courts must be reserved in advance.
-            To book a court, visit the <a href="https://www.kourts.com/">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
+            To book a court, visit the <a href="https://www.kourts.com/" target = "_blank" rel="noreferrer noopener">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
         </p1>
         
       </div>
@@ -315,76 +323,51 @@ function App() {
             </tbody>
         </table>
       </div>
-
-      {/*ABOUT US*/}    
-      <br></br><br></br>
-      <div style={infoStyle}>
-        <h1 className = "profiles" style = {{fontWeight:'bold', fontSize: 40}}>About Us</h1>
-        <p1>
-          Short biography about Lakewood tennis center... when they opened etc ?
-        </p1>
-      </div>
-
       {/*INSTRUCTORS*/} 
       <div style={infoStyle}>
         <h className = "profiles" style = {{fontWeight:'bold', fontSize: 30}}>Instructors</h>
       </div>
 
+    <div className = "instructorBox">
       <div>
         <link rel = "stylesheet"
           href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <div className = "card">
+        <div className = "card" style ={{marginRight: 10, height:"100%"}}>
           <img src = {silva} alt = "Silva" style ={{width: "100%"}}/>
           <h1>Victor Silva</h1>
           <p className="title"> Founder, Silva Tennis Academy</p>
-          <p><button>Contact</button></p>
-        <p>Harvard University</p>
-      </div>
-      </div>
-
-      <div style = {profileName}>
-        <h style = {{fontWeight: 'bold', fontSize: 30}}>Victor Silva</h>
-      </div>
-
-      <div style={profile}>
-        <img src = {silva} alt = "Victor Silva" ></img>
-        <br></br>
-        <p1 fontSize = {200}>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
+          <p1>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
           He has played tennis since he was five years old and started to compete 
           seriously at 12. He won 10 national tournaments in Brazil and more 
           than 50 titles in the Brazilian Tennis Federation. He turned pro at 16 
           and earned his first ATP point shortly thereafter. Victor came to California 
           at 17 years of age, played at Wilson High School in Long Beach,then two years 
           of college at Long Beach State. Victor started Silva Tennis Academy in 2020.</p1>
-        <input 
-          type = "button" 
-          value = "Click for Contact Info" 
-          onClick = {togglePopup}
-        />
-        {isOpen && <Popup
-          content = {<>
-            <p>Contact info here</p>
-          </>}
-        handleClose = {togglePopup}
-        />}       
+          <p><button>Contact</button></p>
+        </div>
       </div>
 
-      <div style = {profileName}>
-        <h style = {{fontWeight: 'bold', fontSize: 30}}>Tem Sykahua</h>
-      </div>
-      <div style={profile}>
-        <img src = {tem} height = {800} width = {'600vw'} alt = "Tem Sykahua"></img>
-        <p>Tem Sykahua is a former Men’s Open Champion. He has won many tournaments that include: 
+      <div>
+        <link rel = "stylesheet"
+          href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <div className = "card" style={{height:'100%'}}>
+          <img src = {tem} alt = "Tem" style ={{width: "100%"}}/>
+          <h1>Tem Sykahua</h1>
+          <p className="title"> Founder, Tem's Amazing Tennis</p>
+          <p1>Tem Sykahua is a former Men’s Open Champion. He has won many tournaments that include: 
            Men’s Open, NTRP 5.5, Junior College, College Division 3, Junior Open and Satellite, 
            Masters, etc. With over 30 years of playing experience, Tem has worked with top level 
            coaches and athletes to share his knowledge of the game. He is a current member of the 
            United States Professional Tennis Association. Tem is also an inductee to Lakewood’s 
-           Hall of Fame for his new found success on students winning tournaments.</p>
-           <input   
+           Hall of Fame for his new found success on students winning tournaments.</p1>
+
+          <p><input   
           type = "button" 
           value = "Click for Contact Info" 
           onClick = {togglePopup}
+          style = {{color: 'white', backgroundColor:'black'}}
         />
         {isOpen && <Popup 
           content = {<>
@@ -393,14 +376,21 @@ function App() {
             <a href = "https://www.temsamazingtennis.com/" target = "_blank" rel="noreferrer noopener">My Website!</a>
           </>}
         handleClose = {togglePopup}
-        />}
+        />}</p>
+          
+      </div>
       </div>
       <br></br>
-
+    </div> 
       {/*CONTACT US*/}   
-      <div style ={infoStyle}>
-        <h className = "contactInfo" style = {{fontWeight: 'bold', fontSize: 40}}>Contact Info</h>
-        <br></br>
+    <div className = "contactBox">
+      <div className = "contactHeader">
+        <div style ={infoStyle}>
+          <h className = "contactInfo" style = {{fontWeight: 'bold', fontSize: 40}}>Contact Info</h>
+        </div>
+      </div>
+
+      <div class = "contactDetails">
         <p1><b>Tennis Director</b></p1>
         <br></br>
         <p1>Eric Stephens</p1>
@@ -408,24 +398,24 @@ function App() {
         <p>Lakewood Tennis – 4212 Clubhouse Dr. Lakewood, CA 90712</p>
         <p>562-496-3530</p>
         {/*to get href tag*/}
-        <a>Lakewood10s@gmail.com</a>
-      </div>
-      <br></br>
+        <p style = {{fontWeight: 'bold'}}>Lakewood10s@gmail.com</p>
       
-      {/*GOOGLE MAPS*/}
-      <div style = {{width: '25vw', height: '25vh', alignItems: 'center'}}>
-        <WrappedMap
-          googleMapURL = {'https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDYxDVoaLN3_ZF4TDICgharUUQtly0lnK8'}
-          loadingElement = {<div style = {{height: "100%"}}/>}
-          containerElement = {<div style = {{ height: "100%", align:'center'}} />}
-          mapElement = {<div style = {{ height:"150%"}} />}
-          
-        />
-      </div>
-      <br></br><br></br><br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
-      <a style = {{fontSize: 50}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener">Get Directions</a>
+        <br></br>
+     
+        {/*GOOGLE MAPS*/}
+        <div style = {{width: '50vw', height: '25vh', alignItems: 'center'}}>
+          <WrappedMap
+            googleMapURL = {'https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDYxDVoaLN3_ZF4TDICgharUUQtly0lnK8'}
+            loadingElement = {<div style = {{height: "100%"}}/>}
+            containerElement = {<div style = {{ height: "100%", align:'center'}} />}
+            mapElement = {<div style = {{ height:"150%"}} />}
             
-
+          />
+        </div>
+        <br></br><br></br><br></br><br></br>  
+        <a style = {{fontSize: 30, color:'white'}}href = "https://www.google.com/maps/place/Lakewood+Tennis+Center/@33.8348484,-118.1568505,17z/data=!3m1!4b1!4m5!3m4!1s0x80dd32523cef5fb3:0x105827ec28f2a3cc!8m2!3d33.8348442!4d-118.1546727" target = "_blank" rel="noreferrer noopener"><button>Get Directions</button></a>
+      </div>    
+    </div>
     </Router>
   );
 }
