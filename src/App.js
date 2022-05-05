@@ -20,6 +20,7 @@ import {useState, useEffect} from 'react';
 import { Autocomplete } from '@react-google-maps/api';
 import  {Carousel} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import Tournaments from './pages/Tournaments';
 
 
 
@@ -44,22 +45,6 @@ function App() {
   }
 
   {/* Tounament api setup */}
-  const [tournData, settournData] = useState([]);
-  const gettournData = async () => {
-    try{
-    {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
-      const res = await fetch('');
-      const tournData = await res.json();
-      settournData(tournData);
-    }
-    catch(error){
-      console.log('error');
-    }
-  }
-
-    useEffect(() => {
-      gettournData();
-    }, []);
 
     {/* Singles Ladder api setup */}
     const [ladderData, setladderData] = useState([]);
@@ -88,23 +73,7 @@ function App() {
     ));
 
     {/* Function to help set up Tournament data */}
-    const tournRows = tournData.map(item => (
-      <tr>
-        <td align='center'>{item.dates}</td>
-        <td align='center'>{item.level}</td>
-        <td align='center'>{item.age_group}</td>
-        <td align='center'>
-        {item.link === 'TBD' ? <p>TBD</p> : 
-        <button
-        type="button"
-        onClick={(e) => {
-        e.preventDefault();
-        window.open(item.link,"_blank");
-      }}
-        > Link to Tournament</button>}
-        </td>
-      </tr>
-    ));
+    
     
     const infoStyle = {
       color: 'black',
@@ -273,32 +242,9 @@ function App() {
       </div>
 
       {/*TOURNAMENTS*/}
+      <Tournaments/>
       
-      <div style={infoStyle}>
-        <h1 className = "Tournaments" style = {{fontWeight:'bold', fontSize: 40}}> Tournaments </h1>
-        <p1>
-            Information about ongoing tournaments
-        </p1>
-
-  
-        {/*functionality of showing tournament info in a table format*/}
-        
-        <table
-          style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
-         className="table table-hover">
-          <thead style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
-            <tr style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
-              <th >Dates</th>
-              <th>Level</th>
-              <th>Age Group</th>
-              <th>Link to Sign-up</th>
-            </tr>
-          </thead>
-            <tbody>
-            {tournRows}
-            </tbody>
-        </table>
-      </div>
+      
   
       {/*SINGLES LADDER*/}
       <div style={infoStyle}>

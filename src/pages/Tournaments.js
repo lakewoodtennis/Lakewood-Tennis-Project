@@ -1,52 +1,81 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 const Tournaments = () => {
-  const [data, setData] = useState([]);
-  const getData = async () => {
+  const [tournData, settournData] = useState([]);
+  const gettournData = async () => {
     try{
-      const res = await fetch('https://sheet.best/api/sheets/74066c3c-3677-4487-a7af-79f1021dd670');
-      const data = await res.json();
-      setData(data);
+      {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
+      const res = await fetch('https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf');
+      const tournData = await res.json();
+      settournData(tournData);
     }
     catch(error){
       console.log('error');
     }
   }
+  const tournRows = tournData.map(item => (
+    <tr>
+      <td align='center'>{item.dates}</td>
+      <td align='center'>{item.level}</td>
+      <td align='center'>{item.age_group}</td>
+      <td align='center'>
+      {item.link === 'TBD' ? <p>TBD</p> : 
+      <button
+      type="button"
+      onClick={(e) => {
+      e.preventDefault();
+      window.open(item.link,"_blank");
+    }}
+      > Link to Tournament</button>}
+      </td>
+    </tr>
+  ));
 
     useEffect(() => {
-      getData();
+      gettournData();
     }, []);
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '90vh'
-      }}
-    >
-      <h1>Tournaments</h1>
-      <div>
+    <div style={infoStyle}>
+        <h1 className = "Tournaments" style = {{fontWeight:'bold', fontSize: 40}}> Tournaments </h1>
+        <p1>
+            Information about ongoing tournaments
+        </p1>
+
+  
+        {/*functionality of showing tournament info in a table format*/}
         
-        {data.map(item => (
-          <div>
-            <h2>
-              {item.dates} {item.level} {item.age_group}
-            </h2>
-            <button
-              type="button"
-              onClick={(e) => {
-              e.preventDefault();
-              window.open(item.link,"_blank");
-              //window.location.href= item.link;
-            }}
-              > Link to Tournament</button>
-            
-          </div>
-        ))}
+        <table
+          style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
+         className="table table-hover">
+          <thead style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+            <tr style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+              <th >Dates</th>
+              <th>Level</th>
+              <th>Age Group</th>
+              <th>Link to Sign-up</th>
+            </tr>
+          </thead>
+            <tbody>
+            {tournRows}
+            </tbody>
+        </table>
       </div>
-    </div>
   );
 };
+
+const infoStyle = {
+  color: 'black',
+  width: '100%',
+  display: 'block', 
+  align: 'center',
+  alignItems:'center', 
+  textAlign: 'center',
+  paddingTop: "5%",
+  paddingBottom: "5%",
+  display: 'block',
+  align: 'center',
+  alignItems:'center',
+  padding: '60px'
+}
 
 export default Tournaments;
