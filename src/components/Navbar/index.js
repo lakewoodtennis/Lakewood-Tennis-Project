@@ -14,12 +14,12 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav style = {{justifyContent: 'space-evenly', width: '100%'}}>
+      <Nav style = {{justifyContent: 'space-evenly', width: '100%', cursor:'pointer'}}>
       <Link activeClass = "active" to = "home" spy = {true} smooth = {true} offset = {-100} delay = {0} >
           <img className="navLogo" src={require('../../images/logotrans.png')} alt='logo'/>
         </Link>
         <Bars />
-        <NavMenu>
+        <NavMenu style = {{cursor:'pointer'}}>
           <Link activeClass = "active" to = "shopInfo" spy = {true} smooth = {true} offset = {-100} delay = {0} style = {{padding: 10, color:"white", fontSize: 20}}>
             Information
           </Link>
