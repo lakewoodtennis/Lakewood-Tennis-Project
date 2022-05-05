@@ -1,7 +1,6 @@
 .navLogo {
     height: 65px;
     width: 290px;
-
   }
 
 
@@ -10,5 +9,5 @@
     display: 'flex';
     justify-content: 'space-evenly';
     height: '90vh';
-    
+    width: '100%';
 } 
