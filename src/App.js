@@ -90,6 +90,21 @@ function App() {
       padding: '60px'
     }
 
+    const rulesStyle = {
+      color: 'black',
+      width: '100%',
+      display: 'block', 
+      align: 'center',
+      alignItems:'center', 
+      //textAlign: 'center',
+      paddingTop: "5%",
+      paddingBottom: "5%",
+      display: 'block',
+      align: 'center',
+      alignItems:'center',
+      padding: '60px'
+    }
+
     const kourts = {
       textAlign: 'center',
       display: 'block',
@@ -236,7 +251,7 @@ function App() {
         <br></br>
         <p1>
             Courts must be reserved in advance.
-            To book a court, visit the <a href="https://www.kourts.com/" target = "_blank" rel="noreferrer noopener">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
+            To book a court, visit the <a href="https://www.kourts.com/players/clubs/california/lakewood-tennis-center-6/" target = "_blank" rel="noreferrer noopener">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
         </p1>
         
       </div>
@@ -247,9 +262,9 @@ function App() {
       
   
       {/*SINGLES LADDER*/}
-      <div style={infoStyle}>
-        <h1 className = "singles" style = {{fontWeight:'bold', fontSize: 40}}> Singles Ladder </h1>
-        <p1 style = {{justifyContent: "flex", align : "left"}}>
+      <div style={rulesStyle}>
+        <h1 className = "singles" style = {{fontWeight:'bold', fontSize: 40, textAlign: 'center'}}> Singles Ladder </h1>
+        <p1 style = {{flexdirection: "row"}}>
         Lakewood Tennis Ladder rules:<br/>                                              	
         1.  Challenge Guidelines: Players may challenge upwards a maximum of three positions. Challengers must issue the challenge to higher players and matches must be accepted and scheduled within three weeks of the challenge, unless both players agree to an extension, or the ladder director (Head Pro or Tennis Director) accepts a reasonable reason for a delay such as a challenged player being out of town or injured. In any event, all matches must be played within five weeks, or the challenged player is dropped from the ladder.<br/> 
         2.  Time Between Challenges: To avoid excess challenges against any single player, no player may be challenged within one week of having played any challenge match.<br/> 
