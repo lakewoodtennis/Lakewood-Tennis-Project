@@ -6,9 +6,9 @@ const Tournaments = () => {
   {/* Tounament api setup */}
   const gettournData = async () => {
     try{
-      {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
+      {/*api link: `https://sheet.best/api/sheets/${process.env.REACT_APP_TOURNAMENT_GOOGLE_SHEETS_KEY}`*/}
       //env not working
-      const res = await fetch('https://sheet.best/api/sheets/?{process.env.REACT_APP_TOURNAMENT_GOOGLE_SHEETS_KEY}');
+      const res = await fetch(`https://sheet.best/api/sheets/`);
       const tournData = await res.json();
       settournData(tournData);
     }

@@ -6,9 +6,9 @@ const Singles = () => {
   const [ladderData, setladderData] = useState([]);
   const getladderData = async () => {
     try{
-    {/*api link: https://sheet.best/api/sheets/2f8bd442-bbfd-4826-a098-b9f4c48eae19*/}
+    {/*api link: `https://sheet.best/api/sheets/${process.env.REACT_APP_LADDER_GOOGLE_SHEETS_KEY}`*/}
     //env not working
-      const res = await fetch('https://sheet.best/api/sheets/?{process.env.REACT_APP_LADDER_GOOGLE_SHEETS_KEY}');
+      const res = await fetch(`https://sheet.best/api/sheets/`);
       const ladderData = await res.json();
       setladderData(ladderData);
     }
