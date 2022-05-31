@@ -321,7 +321,7 @@ function App() {
         {/*GOOGLE MAPS*/}
         <div style = {{width: '50vw', height: '25vh', alignItems: 'center'}}>
           <WrappedMap
-            googleMapURL = {'https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDYxDVoaLN3_ZF4TDICgharUUQtly0lnK8'}
+            googleMapURL = {`https://maps.googleapis.com/maps/api/js?&v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
             loadingElement = {<div style = {{height: "100%"}}/>}
             containerElement = {<div style = {{ height: "100%", align:'center'}} />}
             mapElement = {<div style = {{ height:"150%"}} />}

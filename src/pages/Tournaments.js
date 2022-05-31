@@ -2,6 +2,8 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 const Tournaments = () => {
   const [tournData, settournData] = useState([]);
+
+  {/* Tounament api setup */}
   const gettournData = async () => {
     try{
       {/*api link: https://sheet.best/api/sheets/01e8f551-bd88-4744-b224-781ee9a817cf'*/}
@@ -13,6 +15,8 @@ const Tournaments = () => {
       console.log('error');
     }
   }
+
+  {/* Function to help set up Tournament data */}
   const tournRows = tournData.map(item => (
     <tr>
       <td align='center'>{item.dates}</td>
