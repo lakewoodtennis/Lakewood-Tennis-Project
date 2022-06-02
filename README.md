@@ -10,7 +10,7 @@ The Lakewood Tennis Courts Website was created by the Shrigma Males for Lakewood
 The The Lakewood Tennis Courts website works on any internet browser on any OS. The app is built using JavaScript, Node.js, and React.
 - Install Node.js/npm
 ## Building
-- Install dependencies using `npm install`
+- Install dependencies using `npm install` `npm i -S @react-google-maps/api` `npm install react-scroll`
 - Build the app using `npm start`
 ## Launching
 Launch the website using Visual Studio Code on your OS.
