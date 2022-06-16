@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d322176e.chunk.css",
+    "main.js": "/static/js/main.b8980368.chunk.js",
+    "main.js.map": "/static/js/main.b8980368.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.91805d53.js",
+    "runtime-main.js.map": "/static/js/runtime-main.91805d53.js.map",
+    "static/css/2.68a81a89.chunk.css": "/static/css/2.68a81a89.chunk.css",
+    "static/js/2.8a4fe2c8.chunk.js": "/static/js/2.8a4fe2c8.chunk.js",
+    "static/js/2.8a4fe2c8.chunk.js.map": "/static/js/2.8a4fe2c8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.13f89736bea0aa3f7e8864a44c135fa8.js": "/precache-manifest.13f89736bea0aa3f7e8864a44c135fa8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.68a81a89.chunk.css.map": "/static/css/2.68a81a89.chunk.css.map",
+    "static/css/main.d322176e.chunk.css.map": "/static/css/main.d322176e.chunk.css.map",
+    "static/js/2.8a4fe2c8.chunk.js.LICENSE.txt": "/static/js/2.8a4fe2c8.chunk.js.LICENSE.txt",
+    "static/media/court1.jpg": "/static/media/court1.aac7a9b2.jpg",
+    "static/media/court2.jpg": "/static/media/court2.d3873fc2.jpg",
+    "static/media/court3.jpg": "/static/media/court3.316a4591.jpg",
+    "static/media/court5.jpg": "/static/media/court5.15fde968.jpg",
+    "static/media/court6.jpg": "/static/media/court6.9c4f07fb.jpg",
+    "static/media/court7.jpg": "/static/media/court7.3e8b5a4f.jpg",
+    "static/media/kourts.svg": "/static/media/kourts.c7f559a4.svg",
+    "static/media/logotrans.png": "/static/media/logotrans.42baf479.png",
+    "static/media/silva.jpg": "/static/media/silva.a210b30e.jpg",
+    "static/media/tem.jpg": "/static/media/tem.cfacbdfd.jpg",
+    "static/media/tenniscenter.jpg": "/static/media/tenniscenter.5b1bddde.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91805d53.js",
+    "static/css/2.68a81a89.chunk.css",
+    "static/js/2.8a4fe2c8.chunk.js",
+    "static/css/main.d322176e.chunk.css",
+    "static/js/main.b8980368.chunk.js"
+  ]
+}
