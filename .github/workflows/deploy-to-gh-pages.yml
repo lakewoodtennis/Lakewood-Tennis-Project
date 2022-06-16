@@ -34,7 +34,7 @@ jobs:
          npm install
          npm install react-scroll
          npm i -S @react-google-maps/api
-         npm run-script build
+         CI='' npm run build
         env:
          REACT_APP_GOOGLE_MAPS_KEY: ${{ secrets.REACT_APP_GOOGLE_MAPS_KEY }}
          REACT_APP_LADDER_GOOGLE_SHEETS_KEY: ${{ secrets.REACT_APP_LADDER_GOOGLE_SHEETS_KEY }}
