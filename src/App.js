@@ -226,7 +226,7 @@ function App() {
         <br></br>
         <p1>
             Courts must be reserved in advance.
-            To book a court, visit the <a href="https://www.kourts.com/players/clubs/california/lakewood-tennis-center-6/" target = "_blank" rel="noreferrer noopener">Kourts website</a> and search "Lakewood Tennis Center" under the "courts" tab!
+            To book a court, visit the <a href="https://www.str8sets.com/" target = "_blank" rel="noreferrer noopener">Str8sets website</a> to download the mobile app to make a reservation!
         </p1>
         
       </div>
