@@ -249,7 +249,7 @@ function App() {
           href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <div className = "card" style ={{marginRight: 10, height:"100%"}}>
-          <img src = {silva} alt = "Silva" style ={{width: "100%",height:'66%'}}/>
+          <img src = {silva} alt = "Silva" style ={{width: "100%",height:'93vh'}}/>
           
           <h1>Victor Silva</h1>
           <p className="title"> Founder, Silva Tennis Academy</p>
