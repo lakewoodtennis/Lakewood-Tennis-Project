@@ -49,10 +49,10 @@ const Tournaments = () => {
         {/*functionality of showing tournament info in a table format*/}
         
         <table
-          style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}
+          style={{"borderCollapse": "collapse", "padding": "auto", "width": "100%", "border": "1px solid black"}}
          className="table table-hover">
-          <thead style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
-            <tr style={{"borderCollapse": "collapse", "padding": "5px", "width": "100%", "border": "1px solid black"}}>
+          <thead style={{"borderCollapse": "collapse", "padding": "auto", "width": "100%", "border": "1px solid black"}}>
+            <tr style={{"borderCollapse": "collapse", "padding": "auto", "width": "100%", "border": "1px solid black"}}>
               <th >Dates</th>
               <th>Level</th>
               <th>Age Group</th>
