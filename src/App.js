@@ -243,14 +243,14 @@ function App() {
       <div style={infoStyle}>
         <h className = "profiles" style = {{fontWeight:'bold', fontSize: 30}}>Instructors</h>
       </div>
-
     <div className = "instructorBox">
       <div>
         <link rel = "stylesheet"
           href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <div className = "card" style ={{marginRight: 10, height:"100%"}}>
-          <img src = {silva} alt = "Silva" style ={{width: "100%"}}/>
+          <img src = {silva} alt = "Silva" style ={{width: "100%",height:'66%'}}/>
+          
           <h1>Victor Silva</h1>
           <p className="title"> Founder, Silva Tennis Academy</p>
           <p1>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
@@ -260,10 +260,10 @@ function App() {
           and earned his first ATP point shortly thereafter. Victor came to California 
           at 17 years of age, played at Wilson High School in Long Beach,then two years 
           of college at Long Beach State. Victor started Silva Tennis Academy in 2020.</p1>
-          <p><button>Contact</button></p>
+          
         </div>
       </div>
-
+      
       <div>
         <link rel = "stylesheet"
           href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
