@@ -22,6 +22,7 @@ import  {Carousel} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import Tournaments from './pages/Tournaments';
 import Singles from './pages/Singles';
+import Instructors from './pages/Instructors';
 
 
 
@@ -239,65 +240,12 @@ function App() {
       {/*SINGLES LADDER*/}
       <Singles/>
 
-      {/*INSTRUCTORS*/} 
-      <div style={infoStyle}>
-        <h className = "profiles" style = {{fontWeight:'bold', fontSize: 30}}>Instructors</h>
-      </div>
-    <div className = "instructorBox">
-      <div>
-        <link rel = "stylesheet"
-          href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <div className = "card" style ={{marginRight: 10, height:"100%"}}>
-          <img src = {silva} alt = "Silva" style ={{width: "100%",height:'93vh'}}/>
-          
-          <h1>Victor Silva</h1>
-          <p className="title"> Founder, Silva Tennis Academy</p>
-          <p1>Started playing in Sao Paolo, Brazil, coached by his father, Edson. 
-          He has played tennis since he was five years old and started to compete 
-          seriously at 12. He won 10 national tournaments in Brazil and more 
-          than 50 titles in the Brazilian Tennis Federation. He turned pro at 16 
-          and earned his first ATP point shortly thereafter. Victor came to California 
-          at 17 years of age, played at Wilson High School in Long Beach,then two years 
-          of college at Long Beach State. Victor started Silva Tennis Academy in 2020.</p1>
-          
-        </div>
-      </div>
-      
-      <div>
-        <link rel = "stylesheet"
-          href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <div className = "card" style={{height:'100%'}}>
-          <img src = {tem} alt = "Tem" style ={{width: "100%"}}/>
-          <h1>Tem Sykahua</h1>
-          <p className="title"> Founder, Tem's Amazing Tennis</p>
-          <p1>Tem Sykahua is a former Men’s Open Champion. He has won many tournaments that include: 
-           Men’s Open, NTRP 5.5, Junior College, College Division 3, Junior Open and Satellite, 
-           Masters, etc. With over 30 years of playing experience, Tem has worked with top level 
-           coaches and athletes to share his knowledge of the game. He is a current member of the 
-           United States Professional Tennis Association. Tem is also an inductee to Lakewood’s 
-           Hall of Fame for his new found success on students winning tournaments.</p1>
+      <Instructors/>
 
-          <p><input   
-          type = "button" 
-          value = "Click for Contact Info" 
-          onClick = {togglePopup}
-          style = {{color: 'white', backgroundColor:'black'}}
-        />
-        {isOpen && <Popup 
-          content = {<>
-            <p>Location: Lakewood Tennis Center</p>
-            <p>Phone: (562) 355 - 2545</p>
-            <a href = "https://www.temsamazingtennis.com/" target = "_blank" rel="noreferrer noopener">My Website!</a>
-          </>}
-        handleClose = {togglePopup}
-        />}</p>
+     
           
-      </div>
-      </div>
-      <br></br>
-    </div> 
+      
+
       {/*CONTACT US*/}   
     <div className = "contactBox">
       <div className = "contactHeader">
