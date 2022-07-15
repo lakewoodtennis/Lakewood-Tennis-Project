@@ -1,0 +1,48 @@
+.instructor{
+    display:grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 80px;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10%;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+}
+.instructor-name{
+    font-weight: bold;
+    margin-top: 2%;
+}
+.image-div{
+    height: 50vh;
+}
+.instructor-photo{
+    width: 250px;
+    height: 45vh;
+    object-fit: cover;
+    align-items : 'center';
+    object-position: 0% 0%;
+}
+
+@media screen and (max-width: 900px){
+    .instructor{
+        display:grid;
+        grid-template-columns: repeat(1, 80vw);
+        grid-gap: 80px;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .instructor-bio{
+      width:100%;
+    }
+    .instructor-photo{
+        
+        
+
+    }
+  }
