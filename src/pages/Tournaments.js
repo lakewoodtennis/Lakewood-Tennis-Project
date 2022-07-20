@@ -79,7 +79,7 @@ const infoStyle = {
   display: 'block',
   align: 'center',
   alignItems:'center',
-  padding: '60px'
+  paddingLeft: 'auto'
 }
 
 export default Tournaments;
