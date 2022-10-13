@@ -17,7 +17,7 @@ const Instructors = () =>{
     {
         instructorName:'Kirk Wilson',
         instructorTitle:'Contact Number: (562) 477- 6241',
-        instructorBio: 'Has 35+ years of teaching experience. Coaches all levels. Serious students only.',
+        instructorBio: 'Former Tour Player. Has 35+ years of teaching experience. Coaches all levels. Serious students only.',
         
     }]
 
